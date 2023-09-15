@@ -333,7 +333,7 @@ TopViewControllerForViewController(UIViewController *viewController) {
                   withResult:withResult];
           if (!withResult)
             result(nil);
-        } else if ([@"shareUri" isEqualToString:call.method]) {
+        } else if ([@"shareUri" isEqualToString:call.method] || [@"shareUriWithResult" isEqualToString:call.method]) {
           NSString *uri = arguments[@"uri"];
 
           if (uri.length == 0) {
